@@ -1,102 +1,75 @@
-# CampusOS — AI Build Hackathon
+# CampusOS
 
-An intelligent university platform powered by an AI agent that understands and acts on real-time campus data.
+An intelligent campus platform built for the AI Build Hackathon: a data dashboard for managing schedules, rooms, events, announcements, and assignments, plus an AI agent that reads and acts on that same live data through real tool calling.
 
----
+## Overview
 
-## The Challenge
+CampusOS is a single Node.js/Express app. On startup it seeds a SQLite database from the provided seed JSON files (only on first run — after that, SQLite is the source of truth). A vanilla JS dashboard on the left lets you view, add, edit, and delete records across all five systems, plus book rooms and register for events; every change is written straight to SQLite and reflected in the UI immediately, no manual refresh. A chat panel on the right talks to an AI agent (Claude, via the Anthropic Messages API) that uses real function/tool calling to query and modify the exact same database the dashboard uses — so an edit made in the dashboard is visible to the agent on the very next question, and an action the agent takes (like booking a room) shows up in the dashboard right away.
 
-Students struggle daily with scattered campus information — class changes buried in group chats, deadlines forgotten until the last minute, no easy way to know what's happening on campus right now.
+## Tech Stack
 
-Your job: build **CampusOS** — a two-part app with a data dashboard and an AI agent that always reads live data.
+- **Backend:** Node.js + Express
+- **Database:** SQLite (via `better-sqlite3`), seeded once from `data/*.json` on first boot
+- **Frontend:** Vanilla HTML/CSS/JS single-page dashboard (no build step, no framework)
+- **AI Agent:** [Groq](https://groq.com) (`openai/gpt-oss-120b` by default) — free API tier, no credit card required. Called directly via Groq's OpenAI-compatible `/chat/completions` endpoint with **native tool/function calling** — the model calls real functions (`list_schedules`, `book_room`, `search_available_rooms`, `register_for_event`, etc.) that hit the live SQLite database through the same service layer the REST API uses. No prompt-chaining or faked function calling.
 
-Read the full problem statement → [`PROBLEM_STATEMENT.md`](./PROBLEM_STATEMENT.md)
+## Setup Instructions
 
----
-
-## Repository Structure
-
-```
-campusos-hackathon/
-│
-├── README.md                    ← You are here
-├── PROBLEM_STATEMENT.md         ← Full problem statement + scoring
-├── SUBMISSION.md                ← How and where to submit
-│
-├── data/                        ← Seed data (load these into your backend)
-│   ├── schedules.json
-│   ├── rooms.json
-│   ├── events.json
-│   ├── announcements.json
-│   └── assignments.json
-│
-├── schema/
-│   └── schema.md                ← Field names, types, and constraints for all 5 systems
-│
-└── sample_queries/
-    └── sample_queries.md        ← Queries we will use when judging your agent
-```
-
----
-
-## How to Participate
-
-### 1. Fork the repository
-
-Click **Fork** in the top-right corner of this repo's GitHub page. This creates your own copy under your GitHub account, where you'll build your solution.
-
-### 2. Clone your fork
+**Requirements:** Node.js 18+
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/campusos-hackathon.git
-cd campusos-hackathon
+# 1. Install dependencies
+npm install
+
+# 2. Configure environment
+cp .env.example .env
+# then open .env and paste your Groq API key into GROQ_API_KEY
+# get a free key (no credit card needed) at https://console.groq.com/keys
+
+# 3. Start the app
+npm start
 ```
 
-### 3. Build your solution inside your fork
+Open **http://localhost:3000** — the dashboard and the chat agent are both served from this one URL. The database file `campusos.db` is created automatically on first run and seeded from `data/*.json`; it persists across restarts (delete `campusos.db` if you ever want to reseed from scratch).
 
-> Your solution lives in your fork — do not open a pull request to this repo.
+## Environment Variables
 
-### 4. Making your fork private
+| Variable | Required | Description |
+|---|---|---|
+| `GROQ_API_KEY` | Yes (for the agent) | Free API key for Groq — get one at [console.groq.com/keys](https://console.groq.com/keys), no credit card required. The dashboard/CRUD works without it; only `/api/chat` needs it. |
+| `GROQ_MODEL` | No | Overrides the model used by the agent. Defaults to `openai/gpt-oss-120b`. |
+| `PORT` | No | Port for the server. Defaults to `3000`. |
 
-By default, a fork is public. If you want to keep your work hidden from other participants while you build:
+## How to Use the Agent
 
-1. Go to your fork on GitHub
-2. Open **Settings** (top of the repo page)
-3. Scroll to the **Danger Zone** at the bottom
-4. Click **Change repository visibility** → **Make private**
-5. Confirm by typing the repository name
+Type into the chat panel on the right, or click one of the suggestion chips. Things it can handle:
 
-> **You may keep your fork private during the hackathon period, but it must be switched back to public by 8:30 PM on the submission deadline.** Repositories still private after that time will not be judged. To make it public again, repeat the steps above and choose **Make public** instead.
+- **Lookups:** "When is my next class?", "What classes do I have on Wednesday?", "What assignments are due this week?", "Show me high priority announcements."
+- **Multi-source reasoning:** "I'm free until 2 — anything on campus I could drop into?", "Which labs have a projector and fit at least 30 people?"
+- **Actions:** "Book Room 7A02 tomorrow from 3 to 5 PM" (it will ask for your name if you don't give one), "Register me for the Guest Lecture on Deep Learning."
+- **Vague requests:** "Just book me any room tomorrow afternoon" — the agent will ask which room and time instead of guessing.
+- **Live edits:** Edit or add something in the dashboard (e.g. change a room's capacity, post a new announcement), then immediately ask the agent about it — it always queries the current database, never a cached copy.
 
-### 5. Submit
+## Project Structure
 
-Submit your fork's public URL via the instructions in [`SUBMISSION.md`](./SUBMISSION.md).
+```
+campusos/
+├── server/
+│   ├── index.js           # Express entry point
+│   ├── db.js               # SQLite setup + one-time seeding from data/*.json
+│   ├── routes.js           # REST API for all 5 systems + booking/registration + /api/chat
+│   ├── services/           # CRUD + business logic per resource (shared by API and agent)
+│   └── agent/
+│       ├── tools.js        # Tool definitions + executors the agent can call
+│       └── chat.js         # Anthropic tool-calling loop
+├── public/                 # Dashboard frontend (HTML/CSS/vanilla JS)
+├── data/                   # Seed JSON (only used once, on first boot)
+└── .env.example
+```
 
----
+## Notes
 
-## Quick Links
-
-| Resource | Link |
-|----------|------|
-| Full problem statement | [`PROBLEM_STATEMENT.md`](./PROBLEM_STATEMENT.md) |
-| Data schema | [`schema/schema.md`](./schema/schema.md) |
-| Sample agent queries | [`sample_queries/sample_queries.md`](./sample_queries/sample_queries.md) |
-| Submission guide | [`SUBMISSION.md`](./SUBMISSION.md) |
-
----
-
-## Seed Data Overview
-
-| File | Records | What It Contains |
-|------|---------|-----------------|
-| `schedules.json` | 24 | Class timetable — course, day, time, room, instructor |
-| `rooms.json` | 20 | Rooms 7A01–7A07, 7B01–7B08, 7C01–7C05 with equipment and bookings |
-| `events.json` | 7 | Campus events with registration lists |
-| `announcements.json` | 8 | Notices with priority levels and expiry dates |
-| `assignments.json` | 8 | Course assignments with deadlines and submission status |
-
-> **Important:** These JSON files are only the starting/seed data — not the database itself. Load them into a real backend (a database, or at minimum a backend service with persistent storage) on app startup. Your dashboard and AI agent must both read from and write to that backend, not the static JSON files directly. If you add, edit, or delete a record, the change must be saved in your backend and still be there after a reload — the JSON files in this repo will not update. The agent is also expected to always query the current backend state, not a cached or hardcoded copy of the seed data.
-
----
-
-Good luck. Build something that actually works.
+- All five systems (Schedules, Rooms, Events, Announcements, Assignments) support full add/edit/delete from the dashboard, with rooms additionally supporting **book/cancel** and events supporting **register/cancel**.
+- Room booking checks for time-conflicts server-side before confirming.
+- Event registration checks capacity and blocks duplicate/closed registrations.
+- The agent's system prompt tells it to always call a tool before answering factual questions (never rely on memory) and to ask a clarifying question before booking/registering when the request is vague.
