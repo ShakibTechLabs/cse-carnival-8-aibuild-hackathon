@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CampusOS</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">Campus<span>OS</span></div>
+  <div class="nav-item active" data-view="schedules">🗓️ Schedules <span class="nav-count" id="count-schedules">–</span></div>
+  <div class="nav-item" data-view="rooms">🏫 Rooms <span class="nav-count" id="count-rooms">–</span></div>
+  <div class="nav-item" data-view="events">🎉 Events <span class="nav-count" id="count-events">–</span></div>
+  <div class="nav-item" data-view="announcements">📣 Announcements <span class="nav-count" id="count-announcements">–</span></div>
+  <div class="nav-item" data-view="assignments">📚 Assignments <span class="nav-count" id="count-assignments">–</span></div>
+  <div class="sidebar-footer">AI Build Hackathon<br/>CampusOS Data Manager</div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div>
+      <h1 id="view-title">Class Schedule</h1>
+      <p id="view-subtitle">Every class, section, room, and instructor — live from the backend.</p>
+    </div>
+    <button class="btn btn-primary" id="add-btn">+ Add</button>
+  </div>
+
+  <div class="view" id="view-schedules"></div>
+  <div class="view hidden" id="view-rooms"></div>
+  <div class="view hidden" id="view-events"></div>
+  <div class="view hidden" id="view-announcements"></div>
+  <div class="view hidden" id="view-assignments"></div>
+</main>
+
+<section class="chat-panel">
+  <div class="chat-header">
+    <h2>Campus Assistant</h2>
+    <p>Always reads the current data — try asking about your schedule or booking a room.</p>
+  </div>
+  <div class="chat-messages" id="chat-messages">
+    <div class="msg msg-agent">Hey! I'm the CampusOS agent. Ask me about your classes, free rooms, events, announcements, or assignments — or ask me to book a room or register you for something.</div>
+  </div>
+  <div class="chat-suggestions" id="chat-suggestions">
+    <div class="suggestion-chip">When is my next class?</div>
+    <div class="suggestion-chip">What's due this week?</div>
+    <div class="suggestion-chip">Any high priority announcements?</div>
+    <div class="suggestion-chip">Free rooms tomorrow with a projector for 30 people?</div>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chat-input" placeholder="Ask CampusOS anything..." />
+    <button id="chat-send">Send</button>
+  </div>
+</section>
+
+<div class="modal-backdrop hidden" id="modal-backdrop">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

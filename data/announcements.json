@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ann-001",
+    "title": "CSE 4113 Class Rescheduled — Sunday 7 Sep",
+    "body": "The CSE 4113 (Pattern Recognition) class scheduled for Sunday, 7th September at 1:00 PM in Room 7A07 has been moved to Room 7A04 at 3:30 PM on the same day. Students must attend the rescheduled slot. — Prof. Dr. Md. Shahriar Mahbub",
+    "date": "2026-09-04",
+    "priority": "high",
+    "posted_by": "Prof. Dr. Md. Shahriar Mahbub",
+    "expires": "2026-09-07"
+  },
+  {
+    "id": "ann-002",
+    "title": "CSE 4137 Midterm Syllabus",
+    "body": "Soft Computing midterm will cover: Fuzzy Sets and Logic (Chapters 1-3), Neural Networks basics (Chapter 4), and Genetic Algorithms introduction (Chapter 5). Exam date will be announced by the department. Refer to the course slides shared on Google Classroom. — Prof. Dr. Faisal Muhammad Shah",
+    "date": "2026-09-03",
+    "priority": "high",
+    "posted_by": "Prof. Dr. Faisal Muhammad Shah",
+    "expires": "2026-09-20"
+  },
+  {
+    "id": "ann-003",
+    "title": "IPE 4111 Instructor Update",
+    "body": "The instructor for IPE 4111 (Industrial Management) has been finalized. Classes will now be conducted by Mr. Md. Arif Hossain starting from next week. The class schedule and room remain unchanged. — CSE Department",
+    "date": "2026-09-02",
+    "priority": "medium",
+    "posted_by": "CSE Department",
+    "expires": "2026-09-10"
+  },
+  {
+    "id": "ann-004",
+    "title": "Library Closed — September 5 (Friday)",
+    "body": "The AUST Central Library will remain closed on Friday, 5th September 2026 due to maintenance work. All reading rooms, digital resource stations, and the lending counter will be unavailable. Normal operations resume on Saturday. — Library Authority",
+    "date": "2026-09-03",
+    "priority": "low",
+    "posted_by": "Library Authority",
+    "expires": "2026-09-05"
+  },
+  {
+    "id": "ann-005",
+    "title": "CSE 4130 Lab Assignment Submission Deadline Extended",
+    "body": "The deadline for CSE 4130 (Formal Languages and Compilers Lab) Assignment 2 has been extended to 10th September 2026 (Wednesday). Submit your report in PDF format on Google Classroom before 11:59 PM. No further extensions will be granted. — Ms. Nusrat Jahan / Ms. Tasnuva Binte Rahman",
+    "date": "2026-09-01",
+    "priority": "high",
+    "posted_by": "Ms. Nusrat Jahan",
+    "expires": "2026-09-10"
+  },
+  {
+    "id": "ann-006",
+    "title": "AUSTPIC Membership Drive — Fall 2026",
+    "body": "AUST Programming and Informatics Club (AUSTPIC) is now accepting new members for the Fall 2026 semester. All CSE students are eligible. Fill out the Google Form (link in bio) before 8th September. Selected members will be notified via email. — AUSTPIC",
+    "date": "2026-09-01",
+    "priority": "medium",
+    "posted_by": "AUSTPIC",
+    "expires": "2026-09-08"
+  },
+  {
+    "id": "ann-007",
+    "title": "Canteen Price Update — Effective Immediately",
+    "body": "Due to recent supply cost increases, canteen prices have been revised. Full lunch meal is now BDT 80 (previously BDT 65). Snacks and beverages remain unchanged. We apologize for the inconvenience. — AUST Canteen Management",
+    "date": "2026-08-30",
+    "priority": "low",
+    "posted_by": "AUST Administration",
+    "expires": "2026-12-31"
+  },
+  {
+    "id": "ann-008",
+    "title": "Emergency: Water Supply Disruption — Building 7",
+    "body": "Due to an emergency pipe repair, water supply to the 7th floor (Building 7) will be disrupted on Saturday, 6th September from 8:00 AM to 1:00 PM. Students are advised to carry water. Labs and classrooms on this floor will remain operational. — Maintenance Department",
+    "date": "2026-09-04",
+    "priority": "high",
+    "posted_by": "Maintenance Department",
+    "expires": "2026-09-06"
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "id": "room-001",
+    "room_number": "7A01",
+    "type": "classroom",
+    "capacity": 40,
+    "equipment": ["whiteboard", "projector", "AC"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-002",
+    "room_number": "7A02",
+    "type": "classroom",
+    "capacity": 40,
+    "equipment": ["whiteboard", "projector", "AC"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-003",
+    "room_number": "7A03",
+    "type": "classroom",
+    "capacity": 45,
+    "equipment": ["whiteboard", "projector", "AC", "smart board"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-004",
+    "room_number": "7A04",
+    "type": "classroom",
+    "capacity": 45,
+    "equipment": ["whiteboard", "projector", "AC"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-005",
+    "room_number": "7A05",
+    "type": "classroom",
+    "capacity": 40,
+    "equipment": ["whiteboard", "projector", "AC"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-006",
+    "room_number": "7A06",
+    "type": "classroom",
+    "capacity": 40,
+    "equipment": ["whiteboard", "projector", "AC"],
+    "floor": 7,
+    "status": "available",
+    "bookings": [
+      {
+        "booking_id": "bk-001",
+        "booked_by": "Nusrat Jahan",
+        "date": "2026-09-07",
+        "start_time": "13:00",
+        "end_time": "14:40",
+        "purpose": "CSE 4129 Extra Class"
+      }
+    ]
+  },
+  {
+    "id": "room-007",
+    "room_number": "7A07",
+    "type": "classroom",
+    "capacity": 50,
+    "equipment": ["whiteboard", "projector", "AC", "document camera"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-008",
+    "room_number": "7B01",
+    "type": "lab",
+    "capacity": 30,
+    "equipment": ["computers", "AC", "projector", "whiteboard"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-009",
+    "room_number": "7B02",
+    "type": "lab",
+    "capacity": 30,
+    "equipment": ["computers", "AC", "projector"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-010",
+    "room_number": "7B03",
+    "type": "lab",
+    "capacity": 25,
+    "equipment": ["computers", "AC", "projector"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-011",
+    "room_number": "7B04",
+    "type": "lab",
+    "capacity": 25,
+    "equipment": ["computers", "AC"],
+    "floor": 7,
+    "status": "available",
+    "bookings": [
+      {
+        "booking_id": "bk-002",
+        "booked_by": "Raihan Tanvir",
+        "date": "2026-09-05",
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "purpose": "CSE 4138 Lab makeup"
+      }
+    ]
+  },
+  {
+    "id": "room-012",
+    "room_number": "7B05",
+    "type": "lab",
+    "capacity": 30,
+    "equipment": ["computers", "AC", "projector", "whiteboard"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-013",
+    "room_number": "7B06",
+    "type": "lab",
+    "capacity": 30,
+    "equipment": ["computers", "AC", "projector", "whiteboard"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-014",
+    "room_number": "7B07",
+    "type": "lab",
+    "capacity": 35,
+    "equipment": ["computers", "AC", "projector", "smart board"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-015",
+    "room_number": "7B08",
+    "type": "lab",
+    "capacity": 35,
+    "equipment": ["computers", "AC", "projector", "whiteboard"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-016",
+    "room_number": "7C01",
+    "type": "seminar",
+    "capacity": 60,
+    "equipment": ["projector", "AC", "whiteboard", "microphone", "podium"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-017",
+    "room_number": "7C02",
+    "type": "seminar",
+    "capacity": 60,
+    "equipment": ["projector", "AC", "whiteboard", "microphone"],
+    "floor": 7,
+    "status": "available",
+    "bookings": [
+      {
+        "booking_id": "bk-003",
+        "booked_by": "AUSTPIC",
+        "date": "2026-09-06",
+        "start_time": "15:00",
+        "end_time": "18:00",
+        "purpose": "Hackathon Orientation Session"
+      }
+    ]
+  },
+  {
+    "id": "room-018",
+    "room_number": "7C03",
+    "type": "seminar",
+    "capacity": 55,
+    "equipment": ["projector", "AC", "whiteboard", "microphone"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-019",
+    "room_number": "7C04",
+    "type": "seminar",
+    "capacity": 55,
+    "equipment": ["projector", "AC", "whiteboard"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  },
+  {
+    "id": "room-020",
+    "room_number": "7C05",
+    "type": "seminar",
+    "capacity": 70,
+    "equipment": ["projector", "AC", "whiteboard", "microphone", "podium", "smart board"],
+    "floor": 7,
+    "status": "available",
+    "bookings": []
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "asgn-001",
+    "course": "CSE 4113",
+    "course_title": "Pattern Recognition and Machine Learning",
+    "title": "Assignment 1: Bayes Classifier Implementation",
+    "description": "Implement a Naive Bayes classifier from scratch in Python. Use the provided Iris dataset. Submit your .ipynb file and a 1-page PDF report. No sklearn for the classifier itself.",
+    "assigned_date": "2026-08-28",
+    "deadline": "2026-09-09",
+    "submission_platform": "Google Classroom",
+    "status": "pending",
+    "marks": 10
+  },
+  {
+    "id": "asgn-002",
+    "course": "CSE 4130",
+    "course_title": "Formal Languages and Compilers Lab",
+    "title": "Assignment 2: Lexical Analyzer using Flex",
+    "description": "Write a lexical analyzer for a subset of C language using Flex (Fast Lexical Analyzer). Your analyzer must correctly tokenize keywords, identifiers, operators, and literals. Submit your .l file and a test run screenshot.",
+    "assigned_date": "2026-08-25",
+    "deadline": "2026-09-10",
+    "submission_platform": "Google Classroom",
+    "status": "pending",
+    "marks": 15
+  },
+  {
+    "id": "asgn-003",
+    "course": "CSE 4137",
+    "course_title": "Soft Computing",
+    "title": "Term Paper: Fuzzy Logic Application in Real Life",
+    "description": "Write a 2000-word term paper on a real-world application of fuzzy logic (e.g., washing machines, traffic control, medical diagnosis). Include diagrams, membership functions, and a brief comparison with crisp logic.",
+    "assigned_date": "2026-08-20",
+    "deadline": "2026-09-15",
+    "submission_platform": "Physical submission to FMS sir",
+    "status": "pending",
+    "marks": 20
+  },
+  {
+    "id": "asgn-004",
+    "course": "CSE 4142",
+    "course_title": "Data Warehousing and Mining Lab",
+    "title": "Lab Report 1: Data Preprocessing with WEKA",
+    "description": "Perform data preprocessing on the provided sales dataset using WEKA. Apply normalization, handle missing values, and discretize attributes. Submit a lab report with screenshots of each step.",
+    "assigned_date": "2026-08-27",
+    "deadline": "2026-09-07",
+    "submission_platform": "Physical submission",
+    "status": "submitted",
+    "marks": 10
+  },
+  {
+    "id": "asgn-005",
+    "course": "CSE 4173",
+    "course_title": "Cyber Security",
+    "title": "Assignment 1: CIA Triad Analysis of a Real Breach",
+    "description": "Choose a well-documented cybersecurity breach (e.g., Sony Pictures, Equifax). Analyze it using the CIA Triad framework. Discuss which pillars were violated, how, and what preventive measures could have been taken. 1500 words max.",
+    "assigned_date": "2026-08-29",
+    "deadline": "2026-09-11",
+    "submission_platform": "Google Classroom",
+    "status": "pending",
+    "marks": 10
+  },
+  {
+    "id": "asgn-006",
+    "course": "CSE 4129",
+    "course_title": "Formal Languages and Compilers",
+    "title": "Problem Set 1: DFA and NFA Construction",
+    "description": "Solve 5 problems on constructing DFAs and NFAs for given languages. Also convert the given NFA to DFA using the subset construction method. Show all states and transitions clearly.",
+    "assigned_date": "2026-08-26",
+    "deadline": "2026-09-04",
+    "submission_platform": "Physical submission in class",
+    "status": "submitted",
+    "marks": 10
+  },
+  {
+    "id": "asgn-007",
+    "course": "CSE 4141",
+    "course_title": "Data Warehousing and Mining",
+    "title": "Assignment 1: Data Warehouse Schema Design",
+    "description": "Design a star schema and snowflake schema for a fictional e-commerce company. Identify fact tables, dimension tables, and define all attributes. Submit as a PDF with ER diagrams.",
+    "assigned_date": "2026-09-01",
+    "deadline": "2026-09-14",
+    "submission_platform": "Google Classroom",
+    "status": "pending",
+    "marks": 15
+  },
+  {
+    "id": "asgn-008",
+    "course": "CSE 4114",
+    "course_title": "Pattern Recognition and Machine Learning Lab",
+    "title": "Lab Assignment 1: Feature Extraction and Visualization",
+    "description": "Using the MNIST dataset, extract features using PCA and t-SNE. Plot the results and compare. Submit your .ipynb and a brief PDF analysis. Use Python with sklearn and matplotlib.",
+    "assigned_date": "2026-09-03",
+    "deadline": "2026-09-17",
+    "submission_platform": "Google Classroom",
+    "status": "pending",
+    "marks": 10
+  }
+]

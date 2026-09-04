@@ -1,0 +1,121 @@
+[
+  {
+    "id": "evt-001",
+    "name": "AUSTPIC AI Build Hackathon",
+    "description": "24-hour hackathon focused on building AI-powered applications. Open to all CSE students.",
+    "date": "2026-09-10",
+    "start_time": "09:00",
+    "end_time": "09:00",
+    "end_date": "2026-09-11",
+    "venue": "7C01",
+    "organizer": "AUSTPIC",
+    "capacity": 60,
+    "registered": 47,
+    "registrations": [
+      { "student_id": "20-40532", "name": "Sakibul Hassan" },
+      { "student_id": "20-40511", "name": "Farhan Ahmed" },
+      { "student_id": "20-40498", "name": "Tasnia Islam" }
+    ],
+    "status": "upcoming"
+  },
+  {
+    "id": "evt-002",
+    "name": "Guest Lecture: Deep Learning in Medical Imaging",
+    "description": "Industry talk by Dr. Iftekhar Ahmed (BUET) on practical applications of CNNs in Bangladeshi healthcare.",
+    "date": "2026-09-08",
+    "start_time": "14:00",
+    "end_time": "16:00",
+    "end_date": "2026-09-08",
+    "venue": "7C05",
+    "organizer": "CSE Department",
+    "capacity": 70,
+    "registered": 62,
+    "registrations": [
+      { "student_id": "20-40532", "name": "Sakibul Hassan" },
+      { "student_id": "21-41205", "name": "Rafi Hossain" }
+    ],
+    "status": "upcoming"
+  },
+  {
+    "id": "evt-003",
+    "name": "Soft Computing Mid-Term Review Session",
+    "description": "Extra prep session by FMS sir before the midterm. Covers fuzzy logic and neural network basics.",
+    "date": "2026-09-06",
+    "start_time": "16:00",
+    "end_time": "18:00",
+    "end_date": "2026-09-06",
+    "venue": "7A04",
+    "organizer": "Prof. Dr. Faisal Muhammad Shah",
+    "capacity": 45,
+    "registered": 38,
+    "registrations": [
+      { "student_id": "20-40532", "name": "Sakibul Hassan" },
+      { "student_id": "20-40511", "name": "Farhan Ahmed" }
+    ],
+    "status": "upcoming"
+  },
+  {
+    "id": "evt-004",
+    "name": "AUST CSE Carnival 8.0 Planning Meeting",
+    "description": "Volunteers and organizers meeting to finalize event lineup, venue layout, and task assignments for CSE Carnival.",
+    "date": "2026-09-05",
+    "start_time": "15:30",
+    "end_time": "17:00",
+    "end_date": "2026-09-05",
+    "venue": "7C02",
+    "organizer": "AUSTPIC",
+    "capacity": 30,
+    "registered": 22,
+    "registrations": [
+      { "student_id": "20-40532", "name": "Sakibul Hassan" }
+    ],
+    "status": "upcoming"
+  },
+  {
+    "id": "evt-005",
+    "name": "Freshers' Orientation — CSE Fall 2026",
+    "description": "Welcome session for newly admitted CSE students. Department heads, club representatives, and senior students will speak.",
+    "date": "2026-09-12",
+    "start_time": "10:00",
+    "end_time": "13:00",
+    "end_date": "2026-09-12",
+    "venue": "7C05",
+    "organizer": "CSE Department",
+    "capacity": 70,
+    "registered": 55,
+    "registrations": [],
+    "status": "upcoming"
+  },
+  {
+    "id": "evt-006",
+    "name": "Workshop: Git & GitHub for Beginners",
+    "description": "Hands-on workshop covering Git basics, branching, pull requests, and open-source contribution workflow.",
+    "date": "2026-09-07",
+    "start_time": "13:00",
+    "end_time": "15:00",
+    "end_date": "2026-09-07",
+    "venue": "7B05",
+    "organizer": "AUSTPIC",
+    "capacity": 30,
+    "registered": 30,
+    "registrations": [
+      { "student_id": "21-41205", "name": "Rafi Hossain" }
+    ],
+    "status": "full"
+  },
+  {
+    "id": "evt-007",
+    "name": "Inter-University Programming Contest (IUPC) Selection",
+    "description": "Internal selection round for AUST's IUPC team. Top performers will represent AUST.",
+    "date": "2026-09-13",
+    "start_time": "10:00",
+    "end_time": "13:00",
+    "end_date": "2026-09-13",
+    "venue": "7B06",
+    "organizer": "AUSTPIC",
+    "capacity": 30,
+    "registered": 18,
+    "registrations": [],
+    "status": "upcoming"
+  }
+]
